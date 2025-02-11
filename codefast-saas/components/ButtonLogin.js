@@ -1,12 +1,15 @@
 import Link from "next/link";
 
-const ButtonLogin = (props) => {
-  const { isLoggedIn, name } = props;
+const ButtonLogin = ({ isLoggedIn, name, extraStyle }) => {
+  /*  const { isLoggedIn, name } = props;*/
 
-  if (props.isLoggedIn) {
+  if (isLoggedIn) {
     return (
-      <Link href="/dashboard" className="btn btn-primary">
-        Welcome back {props.name}
+      <Link
+        href="/dashboard"
+        className={`btn btn-primary  ${extraStyle ? extraStyle : ""}`}
+      >
+        Welcome back {name}
       </Link>
     );
   } else {
