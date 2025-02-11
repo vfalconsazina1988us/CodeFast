@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const ButtonLogin = ({ isLoggedIn, name, extraStyle }) => {
   /*  const { isLoggedIn, name } = props;*/
+     
 
   if (isLoggedIn) {
     return (
@@ -9,7 +10,7 @@ const ButtonLogin = ({ isLoggedIn, name, extraStyle }) => {
         href="/dashboard"
         className={`btn btn-primary  ${extraStyle ? extraStyle : ""}`}
       >
-        Welcome back {name}
+         {name}
       </Link>
     );
   } else {

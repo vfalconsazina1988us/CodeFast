@@ -51,7 +51,7 @@ function Home() {
           customers in minutes.
         </div>
 
-        <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
+        <ButtonLogin isLoggedIn={isLoggedIn} name="Send my feedback" />
 
          </div>
       </section>
@@ -83,7 +83,7 @@ function Home() {
 
             <ButtonLogin
               isLoggedIn={isLoggedIn}
-              name={name}
+              name="Add to Card"
               extraStyle="w-full"
             />
           </div>
