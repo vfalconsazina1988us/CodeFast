@@ -27,7 +27,7 @@ function Home() {
       {/*HEADER*/}
       <section className="bg-base-200">
         <div className="max-w-3xl mx-auto bg-base-200 flex justify-between items-center px-8 py-2">
-          <div className="font-bold">CodeFast</div>
+          <div className="font-bold">My Solutions</div>
           <div className="space-x-4 hidden md:block">
             <Link href="#pricing" className="link link-hover">Pricing</Link>
             <Link href="#faq" className="link link-hover">FAQ</Link>

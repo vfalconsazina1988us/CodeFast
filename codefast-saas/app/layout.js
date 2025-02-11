@@ -5,7 +5,7 @@ import "@/app/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "CodeFast",
+  title: "MySolutions",
   description: "Collect customer feedback and improve your products",
 };
 
