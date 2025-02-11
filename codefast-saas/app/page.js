@@ -1,8 +1,11 @@
 import ButtonLogin from "@/components/ButtonLogin";
-
-import FAQListItem from "@/components/FAQListItem";
-
 import ListItem from "@/components/ListItem";
+import FAQListItem from "@/components/FAQListItem";
+import Link from 'next/link';
+
+import Image from "next/image";
+
+import world from "./world.jpg";
 
 function Home() {
   const isLoggedIn = true;
@@ -26,17 +29,20 @@ function Home() {
         <div className="max-w-3xl mx-auto bg-base-200 flex justify-between items-center px-8 py-2">
           <div className="font-bold">CodeFast</div>
           <div className="space-x-4 hidden md:block">
-            <a className="link link-hover" href="#pricing">Pricing </a>
-            <a className="link link-hover" href="#faq"> FAQ </a>
+            <Link href="#pricing" className="link link-hover">Pricing</Link>
+            <Link href="#faq" className="link link-hover">FAQ</Link>
           </div>
-          
           <div>
             <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
           </div>
         </div>
       </section>
       {/* HERO*/}
-      <section className="text-center  py-32 p-8 max-w-3xl mx-auto">
+      <section className="text-center lg:text-left py-32 p-8 max-w-5xl mx-auto flex flex-col lg:flex-row gap-14 items-center lg:items-start">
+        
+         <Image src={world} alt="world" className="w-96 rounded-xl " />
+         <div>
+                
         <h1 className="text-4xl lg:text-5xl font-bold mb-6">
           Collect customer feedback and improve your products
         </h1>
@@ -46,10 +52,12 @@ function Home() {
         </div>
 
         <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
+
+         </div>
       </section>
 
       {/*PRICING */}
-      <section className="bg-base-200" id="pricing">
+      <section className="bg-base-200 " id="pricing">
         <div className="py-32 px-8 max-w-3xl mx-auto">
           <p className="text-sm uppercase font-medium text-center text-primary">
             Pricing
@@ -92,7 +100,7 @@ function Home() {
             Frequently Asked Questions
           </h2>
 
-          <ul className="max-w-lg mx-auto">
+          <ul>
             {[
               {
                 question: "What do I get exactly?",
