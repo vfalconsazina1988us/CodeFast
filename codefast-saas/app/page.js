@@ -7,6 +7,8 @@ import Image from "next/image";
 
 import world from "./world.jpg";
 
+import clientPromise from "@/libs/mongo";
+
 function Home() {
   const isLoggedIn = true;
   const name = "Victor";
@@ -22,6 +24,11 @@ function Home() {
   const greeting2 = `Hello ${name}`;
   console.log(greeting2);
 
+  
+
+     
+    
+
   return (
     <main>
       {/*HEADER*/}
@@ -29,14 +36,23 @@ function Home() {
         <div className="max-w-3xl mx-auto bg-base-200 flex justify-between items-center px-8 py-2">
           <div className="font-bold">My Solutions</div>
           <div className="space-x-4 hidden md:block">
-            <Link href="#pricing" className="link link-hover">Pricing</Link>
-            <Link href="#faq" className="link link-hover">FAQ</Link>
-          </div>
+  <Link href="#pricing" className="link link-hover">Pricing</Link>
+  <Link href="#faq" className="link link-hover">FAQ</Link>
+  <Link href="/user" className="link link-hover">Users</Link>
+</div>
           <div>
             <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
           </div>
         </div>
       </section>
+
+     {process.env.MONGO_URI}
+    
+
+
+     
+
+
       {/* HERO*/}
       <section className="text-center lg:text-left py-32 p-8 max-w-5xl mx-auto flex flex-col lg:flex-row gap-14 items-center lg:items-start">
         
