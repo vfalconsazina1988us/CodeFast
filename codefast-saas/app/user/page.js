@@ -66,7 +66,7 @@ async function UserPage() {
         </div>
 
         <div className="mt-4 text-sm text-gray-500">
-          Total de usuarios: {users.length}
+          Total de huespedes: {users.length}
         </div>
       </div>
     );

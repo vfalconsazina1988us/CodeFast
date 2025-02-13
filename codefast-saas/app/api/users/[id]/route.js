@@ -60,6 +60,36 @@ export async function PUT(request, { params }) {
       { status: 500 }
     );
   }
+}
+
+export async function DELETE(request, { params }) {
+  try {
+    const client = await clientPromise;
+    const db = client.db("production");
+    const { id } = params;
+
+    const result = await db.collection("users").deleteOne({
+      _id: new ObjectId(id)
+    });
+
+    if (result.deletedCount === 0) {
+      return NextResponse.json(
+        { error: "Usuario no encontrado" },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json({ 
+      message: "Usuario eliminado exitosamente" 
+    });
+
+  } catch (error) {
+    console.error("Error:", error);
+    return NextResponse.json(
+      { error: "Error al eliminar usuario" },
+      { status: 500 }
+    );
+  }
 } 
  
  
