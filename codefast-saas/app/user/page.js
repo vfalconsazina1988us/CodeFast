@@ -10,12 +10,12 @@ async function UserPage() {
     return (
       <div className="p-8 max-w-5xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">Lista de Usuarios</h1>
+          <h1 className="text-3xl font-bold">Lista de huespedes</h1>
           <Link 
             href="/user/new" 
             className="btn btn-primary"
           >
-            Agregar Usuario
+            Agregar huesped
           </Link>
         </div>
         
